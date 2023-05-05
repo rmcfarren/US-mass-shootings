@@ -19,12 +19,12 @@ from streamlit_folium import folium_static
 #title of website
 st.title("United States Mass Shootings Since 1982")
 #Cover image on website
-img = os.path.join(os.path.dirname(__file__), 'police_officer.jpg')
+img = 'police_officer.jpg'
 police_officer = Image.open(img)
 st.image(police_officer)
 
 
-df = pd.read_csv('Final project/USMassShootings.csv', encoding='ISO-8859-1')
+df = pd.read_csv('USMassShootings.csv', encoding='ISO-8859-1')
 
 #Asks user a state code, displays the cities of shootings that occurred in that state
 def get_state_data(df):
